@@ -10,18 +10,10 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func pushButton(button: NSButton) {
+        
+        singleton.value = singleton.value.successor()
+        print("Singleton's value = \(singleton.value)")
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
-
 }
 
